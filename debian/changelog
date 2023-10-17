@@ -1,5 +1,252 @@
-template-repository (1.0-1) unstable; urgency=medium
+zope.schema (7.0.1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Colin Watson <cjwatson@debian.org>  Mon, 02 Jan 2023 14:27:37 +0000
+
+zope.schema (7.0.0-1) unstable; urgency=medium
+
+  * Switch Maintainer to the Debian Python Team (closes: #948814).
+  * New upstream release.
+  * Run tests using zope.testrunner.
+  * Update standards version to 4.6.2, no changes needed.
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 01 Jan 2023 18:24:31 +0000
+
+zope.schema (6.2.0-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream version 6.2.0
+  * d/watch: Update version to 4
+  * d/control:
+    - Change homepage to GitHub
+    - Update Standards-Version to 4.6.0
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Tue, 19 Oct 2021 07:40:51 +0200
+
+zope.schema (6.0.0-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream release.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse
+  * d/control:
+    - Update Standards-Version to 4.5.0
+    - Bump debhelper to 13
+    - Set minimum version on python3-zope.interface
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Thu, 29 Oct 2020 21:12:22 +0100
+
+zope.schema (4.9.3-1) unstable; urgency=medium
+
+  * QA upload
+  * New upstream release
+  * d/watch
+    - Use secure URI
+  * d/control
+    - Change to debhelper-compat
+    - Bump debhelper to 12
+    - Update Standards-Version to 4.4.1
+    - Priority: change from extra to optional
+    - Add Rules-Requires-Root
+    - Secure URI on homepage
+  * d/copyright
+    - Use secure URI
+    - Remove Files-Excluded, not included upstream.
+  * d/rules
+    - Enable testsuite
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Wed, 01 Jan 2020 21:20:28 +0100
+
+zope.schema (4.4.2-5) unstable; urgency=medium
+
+  * Replace custom autopkgtest with autodep8
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 21 Sep 2019 14:02:02 +0200
+
+zope.schema (4.4.2-4) unstable; urgency=medium
+
+  * QA upload.
+  * Orphan the package. Closes: #869472.
+  * Stop building the Python2 package. Closes: #938913.
+  * Fix lintian warnings.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 05 Sep 2019 08:33:48 +0200
+
+zope.schema (4.4.2-3) unstable; urgency=medium
+
+  * d/control: Add missing build dependency on python{,3}-zope.interface.
+    (Closes: #802415)
+  * d/patches/setup-test-require.patch: Added to work around a bug in
+    dh_python3.
+  * d/tests/control, d/tests/all: Rewrite to use simple Test-Commands and
+    remove the 'all' script.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 27 Oct 2015 12:53:11 -0400
+
+zope.schema (4.4.2-2) unstable; urgency=medium
+
+  * d/control: Bump Standards-Version with no other changes necessary.
+  * d/watch: Use the pypi.debian.net redirector.
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 08 Jun 2015 17:17:54 -0400
+
+zope.schema (4.4.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Barry Warsaw <barry@debian.org>  Fri, 12 Sep 2014 16:50:48 -0400
+
+zope.schema (4.4.1-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Gediminas Paulauskas ]
+  * debian/control:
+    - bump Standards-Version to 3.9.4
+    - enable autopkgtest (Closes: #692691)
+  * debian/tests: switch to zope.testrunner
+  * debian/copyright: update to copyright-format 1.0
+
+  [ Barry Warsaw ]
+  * New upstream release.
+  * d/control:
+    - Bumped Standards-Version to 3.9.5 with no other changes necessary.
+    - Added X-Python3-Version.
+    - Added myself to Uploaders.
+    - Updated Build-Depends
+    - Added python3-zope.schema binary package.
+    - wrap-and-sort
+  * d/compat: Bump to version 9.
+  * d/rules: Convert to pybuild and add dh_python3.
+  * d/copyright: Added Files-Excluded header to prune pre-built Sphinx
+    artifacts in docs/_build from the original tarball.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 24 Jun 2014 19:47:02 -0400
+
+zope.schema (3.7.1-2) unstable; urgency=low
+
+  * Team upload.
+  * Use debian/source/options to ignore changes in egg-info directory
+    rather than debian/clean otherwise zcml and txt files are missing.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Tue, 08 Nov 2011 21:50:34 +0900
+
+zope.schema (3.7.1-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Arnaud Fontaine ]
+  * debian/control: add Vcs-Browser field.
+  * Add debian/clean to get rid of egg-info/* to prevent FTBFS if
+    built twice.
+
+  [ Gediminas Paulauskas ]
+  * Use dh_python2 instead of deprecated python-central. (Closes: #617175)
+  * Switch to 3.0 (quilt) source format.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Wed, 19 Oct 2011 01:00:34 +0900
+
+zope.schema (3.7.1-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+
+ -- Gediminas Paulauskas <menesis@pov.lt>  Wed, 09 Mar 2011 17:55:26 +0200
+
+zope.schema (3.6.4-0ubuntu1) maverick; urgency=low
+
+  * New upstream release.
+  * Build-Depend on python-all instead of python-all-dev.
+  * debian/copyright: Update, convert to dep5 format.
+
+ -- Gediminas Paulauskas <menesis@pov.lt>  Tue, 07 Sep 2010 18:42:47 +0300
+
+zope.schema (3.6.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Convert to debhelper 7 and the pydeb dh7 extension.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Wed, 06 Jan 2010 13:13:07 +0100
+
+zope.schema (3.5.4-6) unstable; urgency=low
+
+  [ Matthias Klose ]
+  * Set section to zope.
+
+  [ Fabio Tranchitella ]
+  * debian/control: build-depend on python-van.pydeb >= 1.3.0-2.
+    (Closes: #552930)
+
+ -- Fabio Tranchitella <kobold@debian.org>  Sun, 08 Nov 2009 11:22:51 +0100
+
+zope.schema (3.5.4-5) unstable; urgency=low
+
+  * Rebuild against van.pydeb 1.3.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 12 Sep 2009 20:38:11 +0200
+
+zope.schema (3.5.4-4) unstable; urgency=low
+
+  * debian/rules: fixed a typo which resulted in wrong dependencies.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Sat, 29 Aug 2009 16:29:29 +0200
+
+zope.schema (3.5.4-3) unstable; urgency=low
+
+  * Standards-Version: 3.8.3, no changed required.
+  * debian/rules: fixed FTBFS with Python 2.6. (Closes: #543231)
+  * debian/control: added conflict with zope3.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Fri, 28 Aug 2009 11:33:10 +0200
+
+zope.schema (3.5.4-2) unstable; urgency=low
+
+  * Test depend on python-zope.testing as we need it for the test runner
+    script.
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Tue, 02 Jun 2009 14:15:05 +0200
+
+zope.schema (3.5.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Add watch file
+  * Change source package name
+  * Standards-Version 3.8.1
+  * Python-Version all
+  * Build with the newer python-van.pydeb rather than python-
+    vanguardistas.pydebdep
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Mon, 25 May 2009 22:34:24 +0200
+
+python-zope.schema (3.4.0-2ubuntu1.2) lenny; urgency=low
+
+  * Non-maintainer upload.
+  * Rebuild for lenny
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Fri, 08 May 2009 11:19:29 +0000
+
+python-zope.schema (3.4.0-2ubuntu1.1) etch-devel; urgency=low
+
+  * Non-maintainer upload.
+  * Rebuild for etch-devel
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Wed, 23 Jul 2008 09:46:51 +0200
+
+python-zope.schema (3.4.0-2ubuntu1) hardy; urgency=low
+
+  * Re-build for hardy
+
+ -- Ignas Mikalajunas <ignas.mikalajunas@gmail.com>  Wed, 23 Apr 2008 11:19:24 +0300
+
+python-zope.schema (3.4.0-2) gutsy; urgency=low
+
+  * Use pydebdep
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Tue, 12 Feb 2008 22:41:42 +0100
+
+python-zope.schema (3.4.0-1) gutsy; urgency=low
+
+  * Inital Release
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Thu,  8 Nov 2007 19:27:48 +0100
